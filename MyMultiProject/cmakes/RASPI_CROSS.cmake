@@ -4,6 +4,10 @@ set(CMAKE_BUILD_TYPE release)
 # cmake ../project -DCMAKE_BUILD_TYPE=Release
 # cmake ../project -DCMAKE_BUILD_TYPE=Debug
 
+set(ARM_COMPILE_OPTION "-mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${ARM_COMPILE_OPTION}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ARM_COMPILE_OPTION}")
+
 # cross compiler settings
 set(CMAKE_CROSSCOMPILING TRUE)
 set(CROSS_COMPILE "arm-linux-gnueabihf-")
