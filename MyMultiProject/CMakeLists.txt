@@ -45,4 +45,4 @@ endif()
 
 # Include projects
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/output)
-add_subdirectory(${PROJECT_SOURCE_DIR}/App App)
+add_subdirectory(${PROJECT_SOURCE_DIR}/Main Main)
